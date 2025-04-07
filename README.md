@@ -1,4 +1,4 @@
-# TFC-PUCP
+# Tesis - PUCP
 Tesis de pregrado para ingeniería mecatrónica PUCP - 2024-1
 
 ## Estructura del Repositorio
