@@ -1,0 +1,116 @@
+\begin{xltabular}{\textwidth}[H]{|C{1.7cm}|C{1.8cm}|X|C{2.2cm}|}
+	\caption[Lista de Requerimientos.]{Lista de Exigencias. Fuente: Elaboración propia.}\label{tab:lista_exigencias}\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{LISTA DE EXIGENCIAS}} \bigstrut\\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{PROYECTO}} & \centering\documenttitle & Fecha: 18/04/24 \bigstrut\\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{CLIENTE}} & \centering\universityname & Elaborado por: \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{FUNCIÓN PRINCIPAL}} & \multicolumn{2}{p{9.5cm}|}{Realizar la inspección óptica de prendas de vestir para garantizar su calidad.} \bigstrut\\
+	\hline
+	\textbf{Fecha} & \textbf{\makecell{Deseo o\\Exigencia}} & \centering\textbf{Descripción} & \textbf{Responsable} \bigstrut\\
+	\hline
+	\endfirsthead
+	\caption* {Tabla \ref{tab:lista_exigencias}: Lista de Requerimientos (Continuación).}\\
+	\hline
+	\textbf{Fecha} & \textbf{Deseo o Exigencia} & \centering\textbf{Descripción} & \textbf{Responsable} \bigstrut\\
+	\hline
+	\endhead
+	\multicolumn{4}{|c|}{\textbf{FUNCIONES}} \bigstrut\\
+	\hline
+	18/04/24 & E & La prenda ingresará de manera estirada y sin arrugas. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Se debe detectar las manchas, hilos salidos y agujeros presentes en las prendas. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Se debe detectar metales presentes que se hayan dejado en las prendas como agujas o alfileres. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{OPERACIÓN}} \bigstrut\\
+	\hline
+	18/04/24 & E & El sistema deberá poder controlar la calidad de como mínimo 30 prendas/hora. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{ALIMENTACIÓN}} \bigstrut\\
+	\hline
+	18/04/24 & E & El suministro de energía eléctrica será de 220VAC 60Hz (Monofásica). & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{SOFTWARE}} \bigstrut\\
+	\hline
+	18/04/24 & D & Se debe emplear un software, algoritmo o modelo de código abierto para la inspección óptica de la prenda. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & El sistema debe disponer de una GUI para la interacción con los operarios. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & 	La lógica de programación debe garantizar que los subsistemas de la máquina no tengan tiempo fuera. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{SEÑALES}} \bigstrut\\
+	\hline
+	18/04/24 & E & Entrada: Encendido, apagado, inicio de proceso, fin de proceso.\newline{}Salida: Luz piloto de alimentación, encendido y funcionamiento. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{INTERFAZ}} \bigstrut\\
+	\hline
+	18/04/24 & E & Tablero de control con:\newline{}- Llave de encendido general.\newline{}- Pulsador de inicio y parada de proceso.\newline{}- Parada de emergencia manual.\newline{}- Indicadores luminosos de alimentación, funcionamiento encendido.& \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Para el diseño de la interfaz se seguirá la Norma ISO 9241, enfocada a la usabilidad y ergonomía de software y hardware. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{CONDICIONES DE OPERACIÓN}} \bigstrut\\
+	\hline
+	18/04/24 & E & Ambiente de trabajo con humedad relativa máxima de 85\%, a 100 msmn (condiciones de la costa peruana, en un laboratorio de pruebas). & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & D & Ambiente de trabajo industrial, con máquinas contiguas trabajando en paralelo. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{CONTROL}} \bigstrut\\
+	\hline
+	18/04/24 & E & Alimentación de ropa manual hecha por un operario. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Detección de defectos (manchas, hilos salidos, agujeros) automática . & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Detección de medidas automática de acuerdo a la ficha técnica de la prenda. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & D & Regulación de velocidad de procesamiento de prendas. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Sensores grado mínimo IP 63 (resistencia al polvo y humedad condensada). & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Parada de emergencia automática en caso de atasco o sobrecarga. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{SEGURIDAD}} \bigstrut\\
+	\hline
+	18/04/24 & E & El tablero de control debe contar con protección contra polvo y liquido grado IP64. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Los circuitos eléctricos y los procesos de transferencia de calor deben estar aislados del operario para evitar accidentes. Así mismo, la máquina no debe tener filos de corte expuesto. Estos requisitos de diseño son considerados como exigencias según la Ley Nº 29783 (Ley de Seguridad y Salud en el Trabajo) y la norma OHSAS 18001.  & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{CONTROL DE CALIDAD}} \bigstrut\\
+	\hline
+	18/04/24 & E & La detección de defectos debe tener una efectividad del 90\%. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & La detección de las medidas de la prenda debe tener una precisión del 90\%. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{MONTAJE}} \bigstrut\\
+	\hline
+	18/04/24 & D & El sistema presenta la posibilidad de acoplar varias lineas en paralelo para incrementar la productividad. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & El diseño de la máquina debe ser compacto y debe permitir desmontar los componentes que requieran mantenimiento. Además, se debe considerar una conexión estándar de energía eléctrica. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{MATERIAL}} \bigstrut\\
+	\hline
+	18/04/24 & E & Materiales que eviten la acumulación de manchas y polvo. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{FABRICACIÓN}} \bigstrut\\
+	\hline
+	18/04/24 & E & El diseño debe contar con componentes estandarizados que estén disponibles en el mercado local. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & D & Los elementos diseñados deben evitar el mantenimiento difícil. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{MANTENIMIENTO}} \bigstrut\\
+	\hline
+	18/04/24 & E & Los elementos motrices serán accesibles y las superficies fáciles de limpiar. Los componentes electrónicos no deben estar expuestas al polvo. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{DIMENSIONES}} \bigstrut\\
+	\hline
+	18/04/24 & E & El sistema no deberá ocupar un volumen mayor a 4m x 3m x 3m para poder ser construido en un laboratorio. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	18/04/24 & E & Las dimensiones y la disposición del sistema deben estar diseñadas de manera que garanticen una operación cómoda y segura para el operario. & \documentauthorabbreviation \bigstrut\\
+	\hline
+	\multicolumn{4}{|c|}{\textbf{COSTO}} \bigstrut\\
+	\hline
+	18/04/24 & D & Fabricación: 80000 PEN. & \documentauthorabbreviation \bigstrut\\
+	\hline
+\end{xltabular}

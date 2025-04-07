@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt,oneside]{book} % oneside permite que no haya una página en blanco despues de la portada
+%\documentclass[a4paper,12pt,oneside,draft]{book} %PARA DEBUGEO \hbox
+
+\input{settings} % Archivo de configuración de todo el documento
+
+% ######################### INFORMACIÓN DEL DOCUMENTO #########################
+\newcommand\documenttitle {[TÍTULO DE LA TESIS]}
+\newcommand\documentauthor {[Colocar el nombre completo del autor según el registro de su DNI]}
+\newcommand\documentauthorabbreviation {---N. Apellido---}
+\newcommand\myadvisor{[Colocar el nombre completo del asesor según el registro de su DNI]}
+\newcommand\mycoadvisor{-}
+\newcommand\universityname {PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ}
+\newcommand\universityfaculty {FACULTAD DE CIENCIAS E INGENIERÍA}
+\newcommand\universityimage {logo_PUCP_antiguo.pdf}
+\newcommand\universitylocation{Lima}
+\newcommand\documentdate {\mes, \the\year}
+%\def\documentsubtitle {1MTR01 Trabajo de Fin de Carrera 1}
+\newcommand\documentsubtitle {1MTR02 Trabajo de Fin de Carrera 2}
+%\def\documentsubtitle {Tesis para optener el título profesional de Ingeniero Mecatrónico}
+
+\begin{document}
+	
+% RENOMBRANDO TÍTULOS DE LOS ÍNDICES
+\renewcommand{\contentsname}{ÍNDICE DE CONTENIDO}
+\renewcommand{\listtablename}{ÍNDICE DE TABLAS}
+\renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+\renewcommand{\bibname}{BIBLIOGRAFÍA}
+
+%==========================================================================
+
+%%%%%% PORTADA
+
+\include{chapters/portada}
+
+% Configuración de la numeración
+\frontmatter % Inicia la numeración romana
+\pagestyle{frontmatterstyle} % Numeración en el centro inferior
+\pagenumbering{roman}
+
+%%%%%% RESUMEN
+
+\input{chapters/abstract}
+\newpage
+
+%%%%%% AGRADECIMIENTOS
+
+\input{chapters/acknowledgments}
+\newpage
+
+%==========================================================================
+
+%\singlespacing
+\onehalfspacing % Interlineado 1.5 para los índices
+
+%%%%%% ÍNDICE
+\tableofcontents
+\newpage
+
+%%%%%% LISTA DE TABLAS
+
+\listoftables
+\newpage
+
+%%%%%% LISTA DE FIGURAS
+
+\listoffigures
+\newpage
+
+% Configuración de la numeración
+\mainmatter % Termina la numeración romana
+\pagestyle{mainmatterstyle} % Numeración en la esquina superior derecha
+
+%==========================================================================
+
+\doublespacing % Interlineado doble en el documento principal
+
+%%%%%% DOCUMENTO PRINCIPAL
+\input{content}
+\backmatter
+
+%==========================================================================
+
+\onehalfspacing % Interlineado doble para la bibliografía
+
+%%%%% BIBLIOGRAFÍA
+
+\cleardoublepage
+\pagestyle{plain} % o el estilo que estés usando
+\bibliographystyle{IEEEtran}
+\bibliography{library}
+
+%==========================================================================
+
+\doublespacing % Interlineado doble para la bibliografía
+
+%%%%%% ANEXOS
+
+\appendix % Los capítulos (clase book) que siguen son tratados como apéndices.
+\renewcommand\thefigure{\thesection.\arabic{figure}}
+\renewcommand\thetable{\thesection.\arabic{table}}
+\input{chapters/appendix.tex}
+
+\end{document}

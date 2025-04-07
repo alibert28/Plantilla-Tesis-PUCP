@@ -1,0 +1,79 @@
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ESTRUCTURA_DE_FUNCIONES.drawio.pdf}
+	\caption[Estructura de funciones del sistema.]{Estructura de funciones del sistema. Fuente: Elaboración propia.}
+	\label{fig:ESTRUCTURA_DE_FUNCIONES}
+\end{figure}
+
+\subsubsection{Dominio Mecánico}
+
+El dominio mecánico abarca todas las operaciones físicas y movimientos asociados con el manejo de prendas de vestir, como se muestra en la Figura \ref{fig:EF_DM}. Incluye la recepción de las prendas, su transporte a través de diferentes estaciones de procesamiento como módulos de detección de defectos y el módulo de detección de metales. Una vez terminada la inspección de la prenda, esta es transportada a su disposición final.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{EF_DM.pdf}
+	\caption[Estructura de funciones del dominio mecánico.]{Estructura de funciones del dominio mecánico. Fuente: Elaboración propia.}
+	\label{fig:EF_DM}
+\end{figure}
+
+\subsubsection{Dominio Informático}
+
+El dominio informático se centra en el procesamiento de la información obtenida de las prendas , como se muestra en la Figura \ref{fig:EF_DIn}. Este dominio comprende la adquisición y preprocesamiento de imágenes de las prendas, extracción de características relevantes, detección de defectos, y comparación de estos datos con criterios de selección predefinidos para determinar la calidad de las prendas. Este dominio es crucial para interpretar los datos capturados y tomar decisiones basadas en la información procesada.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{EF_DIn.pdf}
+	\caption[Estructura de funciones del dominio informático.]{Estructura de funciones del dominio informático. Fuente: Elaboración propia.}
+	\label{fig:EF_DIn}
+\end{figure}
+
+\subsubsection{Dominio de Control}
+
+El dominio de control, mostrado en la Figura \ref{fig:EF_DC}, incluye la lógica de control y los mecanismos de decisión que guían las operaciones del sistema. Esto implica generar señales de encendido/apagado basadas en la información procesada, manejar interfaces de entrada/salida, y activar mecanismos de parada de emergencia. Este dominio es esencial para coordinar las actividades de los otros dominios y asegurar que el sistema responda adecuadamente a las condiciones de operación y a los requisitos de procesamiento.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{EF_DC.pdf}
+	\caption[Estructura de funciones del dominio de control.]{Estructura de funciones del dominio de control. Fuente: Elaboración propia.}
+	\label{fig:EF_DC}
+\end{figure}
+
+\subsubsection{Dominio Eléctrico/Electrónico}
+
+El dominio mencionado se ocupa del suministro y control eléctrico de todos los componentes del sistema, como se ilustra en la Figura \ref{fig:EF_DEE}. Su función principal es proporcionar la energía necesaria para el funcionamiento de todos los componentes electrónicos del sistema, desde la activación de los sensores hasta la alimentación de los sistemas de procesamiento de información, actuadores y control. También gestiona la iluminación necesaria para la adquisición de imágenes y la señalización a través de indicadores ON/OFF.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{EF_DEE.pdf}
+	\caption[Estructura de funciones del dominio eléctrico/electrónico.]{Estructura de funciones del dominio eléctrico/electrónico. Fuente: Elaboración propia.}
+	\label{fig:EF_DEE}
+\end{figure}
+
+\subsubsection{Dominio de Sensores}
+
+Este dominio comprende la detección y recopilación de datos a través de sensores diseñados para identificar características específicas de las prendas. Esto se muestra en la Figura \ref{fig:EF_DS}. Se identifica la presencia de metales o la preparación para la captura de imágenes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth]{EF_DS.pdf}
+	\caption[Estructura de funciones del dominio de sensores.]{Estructura de funciones del dominio de sensores. Fuente: Elaboración propia.}
+	\label{fig:EF_DS}
+\end{figure}
+
+\subsubsection{Dominio de Interfaz}
+
+El dominio de la interfaz está dedicado a facilitar la interacción con los usuarios finales del sistema. Como se ilustra en la Figura \ref{fig:EF_DI_1}, esta interacción implica el uso de la energía mecánica ejercida por el operario para generar las señales de control necesarias, que incluyen las acciones de encendido, apagado y parada de emergencia. Por otra parte, la Figura \ref{fig:EF_DI_2} exhibe los resultados derivados de todos los procesos ejecutados por el sistema. Estos resultados se presentan a través de una interfaz diseñada para mostrar la información de manera ordenada y concisa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{EF_DI_1.pdf}
+	\caption[Estructura de funciones del dominio de interfaz.]{Estructura de funciones del dominio de interfaz. Fuente: Elaboración propia.}
+	\label{fig:EF_DI_1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{EF_DI_1.pdf}
+	\caption[Estructura de funciones del dominio de interfaz.]{Estructura de funciones del dominio de interfaz. Fuente: Elaboración propia.}
+	\label{fig:EF_DI_2}
+\end{figure}

@@ -1,0 +1,25 @@
+\chapter*{ANEXOS}% If \appendix doesn't insert a \chapter
+\thispagestyle{mainmatterstyle} % Cambia el estilo para que este numerado en la esquina superior derecha. Esta presente en todos los chapter
+\addcontentsline{toc}{chapter}{ANEXOS}% Print Appendix in ToC
+\setcounter{section}{0}% Reset numbering for sections
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\renewcommand{\thesection}{\Alph{section}}% Adjust section printing (from here onward)
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}% Adjust section printing (from here onward)
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}% This turns off subsections in toc
+
+
+%\section{Lista de exigencias} \label{app:list_of_demands}
+%\input{chapters/appendices/list_of_demands}
+%
+%\setcounter{table}{0}
+%\setcounter{figure}{0}
+%
+%\section{Funciones Parciales} \label{app:partial_functions}
+%\input{chapters/appendices/partial_functions}
+%
+%\setcounter{table}{0}
+%\setcounter{figure}{0}
+%
+%\section{Matriz morfológica} \label{app:morphological_matrix_tables}
+%\input{chapters/appendices/morphological_matrix_tables}

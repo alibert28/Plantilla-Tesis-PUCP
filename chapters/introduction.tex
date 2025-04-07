@@ -1,0 +1,127 @@
+\chapter{\MakeUppercase{Introducción}}
+\thispagestyle{mainmatterstyle} % Cambia el estilo para que este numerado en la esquina superior derecha. Esta presente en todos los chapter
+
+\section{Problemática} \label{problematic} 
+\lipsum[66] Figura~\ref{fig:dummy_image} \lipsum[75] \cite{BonillaPastor2015}
+
+\sourcefigure
+{h} %Parámetro de posición
+{dummy_image} % Nombre de la imagen en ./img y tambien el \label
+{Imagen de prueba} % Caption
+{\cite{imaging_fundamentals_2023}} % Fuente de la imagen, se puede dejar vacía
+{0.6\textwidth} % Tamaño horizontal de la imagen
+
+Figura~\ref{fig:dummy_image} \lipsum[75-76] 
+
+\sourcefigure
+{h} %Parámetro de posición
+{fake_plot} % Nombre de la imagen en ./img y tambien el \label
+{Gráfico falso} % Caption
+{} % Fuente de la imagen, se puede dejar vacía
+{0.5\textwidth} % Tamaño horizontal de la imagen
+
+\lipsum[77] Figura~\ref{fig:fake_plot}
+
+\bestTabla[tab:factores]
+{Factores que afectan la inspección visual pequeño}
+{\cite{BonillaPastor2015}}
+{
+	width = \textwidth,
+	colspec = {c Y},
+	rowhead = 1,
+	hlines,
+	vlines
+}{
+	\textbf{Factores} & \textbf{Ejemplos} \\
+	Técnicos & Tipo de defectos; visibilidad del defecto; nivel de calidad; estándares (pruebas); automatización del control; otros \\
+	Psicofísicos & Edad; sexo; habilidades de observación; experiencia; temperamento; creatividad; otros \\
+	Organizacionales & Capacitación; alcance de la toma de decisiones; retroalimentación; instrucciones precisas; otros \\
+	Entorno de trabajo & Luz; ruido; temperatura; tiempo de trabajo; organización del puesto de trabajo; otros \\
+	Sociales & Comunicación en equipo; presión; aislamiento; otros \\
+}
+
+\lipsum[77]
+\lipsum[4]
+
+\bestTabla[tab:factores-inspeccion]
+{Factores que afectan la inspección visual}
+{}
+{
+	width = \textwidth,
+	colspec = {c Y Y},
+	rowhead = 1,
+	hlines,
+	vlines
+}{
+	\textbf{Factores} & \textbf{Ejemplos} & \textbf{Descripción} \\
+	Inspección de Telas & Escaneo automático de telas y detección de defectos utilizando algoritmos de IA & Identificación de fallas en las telas, impresiones erróneas o irregularidades \\
+	Corte y Costura & Inspección visual de prendas cosidas por sistemas de IA & Detección de errores de costura, desalineación o costuras desiguales \\
+}
+
+\lipsum[21]
+
+\bestTabla[tab:factores2]
+{Factores que afectan la inspección visual}
+{\cite{BonillaPastor2015}}
+{
+	colspec={X X X},
+	hlines,
+	vlines,
+	row{1}={font=\bfseries}
+}{
+	Encabezado Col1 & Encabezado Col2 & Encabezado Col3 \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+	Dato 1 & Dato 2 & Dato 3 \\
+	Dato A & Dato B & Dato C \\
+}
+
+\section{Propuesta de Solución}
+
+Para hacer frente a la problemática expuesta en la Sección\ref{problematic}, el presente trabajo de investigación propone el desarrollo de un sistema mecatrónico para la inspección visual de las prendas de vestir con el objetivo de garantizar un control de calidad riguroso. Este sistema constará de dos subsistemas principales: un subsistema de transporte y un subsistema de inspección. En el subsistema de transporte, un operario introducirá la prenda, que será automáticamente transportada hacia el subsistema de inspección visual y de detección de metales. Este último subsistema se encargará de asegurar que cada prenda cumpla con los estándares de calidad detallados en su ficha técnica, verificando la ausencia de defectos visibles, la precisión en las medidas de las tallas y la no presencia de elementos metálicos extraños. Diseñado para operar de manera autónoma, el sistema reducirá al mínimo la intervención humana, limitándose a tareas esenciales como el ingreso de la prenda en el sistema, la activación de los controles de encendido y apagado y la retirada de la prenda tras su evaluación. Además, el sistema se enfocará exclusivamente en prendas de punto, es decir, aquellas confeccionadas con hilo o lana mediante agujas o maquinaria especializada.
+
+\section{Objetivos}
+
+Este trabajo de investigación define un objetivo general, del cual se desprenden \ref{lst:objetivos_especificos} objetivos específicos, los cuales están diseñados para facilitar la consecución del objetivo general del proyecto.
+
+\subsection{Objetivo General}
+
+Diseñar un sistema mecatrónico para la inspección visual de prendas de vestir con el fin de identificar defectos en su fabricación.
+
+\subsection{Objetivos Específicos}
+
+\begin{enumerate}
+	\setlength\itemsep{-0.5em}
+	\item Establecer los parámetros y características relevantes sobre el control de calidad en prendas de vestir para elaborar una lista de exigencias que guie el diseño conceptual del sistema.
+	
+	\item Dimensionar el tamaño del sistema conforme a las normas y estándares vigentes sobre el tamaño de las prendas de vestir.
+	
+	\item Diseñar un subsistema mecánico que permita transportar las prendas de vestir a través de los distintos módulos del sistema.
+	
+	\item Diseñar el subsistema eléctrico y electrónico seleccionando las fuentes de energía, controladores, sensores y actuadores que permitan el funcionamiento del sistema.
+	
+	\item Diseñar un subsistema de inspección óptica de las prendas, junto con un subsistema de detección de metales que examine cada prenda para identificar y alertar sobre la presencia de agujas, alfileres o cualquier otro elemento metálico extraño.
+	
+	\item Desarrollar un subsistema para la interfaz del sistema que permita visualizar los resultados de la inspección de las prendas, mostrando los defectos detectados, las mediciones de tallas y la identificación de elementos metálicos.
+	
+	\item Estimar el costo total para la implementación del sistema.
+	
+	\label{lst:objetivos_especificos}
+\end{enumerate}
+

@@ -1,0 +1,191 @@
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\caption[Leyenda de colores para los conceptos de solución en las matriz morfológica.]{Leyenda de colores para los conceptos de solución en las matriz morfológica.\\Fuente: Elaboración propia.}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Soluciones} & \textbf{Tipo de Solución} & \textbf{Color} \bigstrut\\
+		\hline
+		Solución 1 & Accesible & \cellcolor[rgb]{1,0,0} \bigstrut\\
+		\hline
+		Solución 2 & Precisa & \cellcolor[rgb]{0,0,1} \bigstrut\\
+		\hline
+		Solución 3 & Robusta & \cellcolor[rgb]{.298, .835, .078} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\label{tab:leyenda_colores_soluciones}%
+\end{table}
+
+\subsection{Dominio de Interfaz}
+
+\begin{xltabular}{\textwidth}{|M{4cm}|Y|Y|Y|}
+	% CONFIGURACIÓN Y CABECERA DE LA TABLA
+	\caption{Matriz morfológica del dominio de interfaz.}\label{tab:MM_DI}\\
+	\hline
+	\multirow{2}{*}{{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}}} & \multicolumn{3}{c|}{\textbf{DOMINIO INTERFAZ}}\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3}\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DI}: Matriz morfológica del dominio de interfaz (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO INTERFAZ}}\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3}\\
+	\hline
+	\endhead
+	% INICIO DE LA TABLA
+	\multirow[b]{2}{*}{\minitab[c]{GENERAR SEÑAL\\ON Y GENERAR\\SEÑAL OFF}} & \IMM{0.06}{botonera1.jpg}{2pt} & \IMM{0.1}{boton_enc_apa_GUI.jpg}{0.6pt} & \IMM{0.11}{Switch_tipo_perilla.jpeg}{2pt} \\
+	\cline{2-4} & \minitab[c]{Caja con\\pulsador\\Start-Stop.\\ \OpV} & \minitab[c]{Botones\\ON/OFF\\en GUI.\\ \OpR} & \minitab[c]{Interruptor\\tipo perilla.\\\OpA} \\
+	\hline
+	\multirow[t]{2}{*}{\minitab[c]{ENCENDER\\INDICADOR DE\\ON, DE OFF Y DE\\ALIMENTACIÓN}} & \IMM{0.13}{img/pilotos_led.jpg}{0.5em} & \IMM{0.14}{img/pantalla_LCD.jpg}{0.3em} & \IMM{0.15}{img/GUI.jpg}{0.1em} \\
+	\cline{2-4} & \minitab[c]{Pilotos led.\\\OpV} & \minitab[c]{Pantalla LCD.\\\OpR} & \minitab[c]{GUI.\\\OpA} \\
+	\hline
+	\multirow{2}{*}{\minitab[c]{RECIBIR\\CRITERIOS DE\\SELECCIÓN}} & \IMM{0.13}{img/hmi_industrial.png}{0.2em} & \IMM{0.15}{img/Pantalla_Perilla.jpg}{0.24em} & \IMM{0.15}{img/GUI.jpg}{0.1em} \\
+	\cline{2-4} & \minitab[c]{HMI\\Industrial.\\\OpA} & \minitab[c]{Pantalla LCD\\con perilla\\de control.\\\OpR} & \minitab[c]{GUI.\\\OpV} \\
+	\hline
+	\multirow{2}{*}{\minitab[c]{CONECTAR Y\\CORTAR\\ALIMENTACIÓN\\ELÉCTRICA}} & \IMM{0.12}{img/termomagnético_diferencial.jpg}{0.7em} & \IMM{0.11}{img/Conmutador_industrial.jpeg}{0.2em} & \IMM{0.11}{img/cable_interruptor.jpg}{0.1em} \\
+	\cline{2-4} & \minitab[c]{Diferencial con\\Termomagnético.\\\OpV} & \minitab[c]{Conmutador\\Industrial.\\\OpA} & \minitab[c]{Cable,\\enchufe e\\interruptor.\\\OpR} \\
+	\hline
+	\multirow{2}{*}{\minitab[c]{MOSTRAR\\INFORMACIÓN\\GRÁFICAMENTE}} & \IMM{0.12}{img/hmi_industrial.png}{0.3em} & \IMM{0.15}{img/GUI.jpg}{0.1em} & \\
+	\cline{2-4} & \minitab[c]{HMI\\Industrial.\\\OpA} & \minitab[c]{GUI.\\\OpR \OpV} & \\
+	\hline
+\end{xltabular}
+
+
+\subsection{Dominio Mecánico}
+
+\begin{xltabular}{\textwidth}{|M{4cm}|Y|Y|Y|}
+	\caption{Matriz morfológica del dominio mecánico.}\label{tab:MM_DM}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO MECÁNICO}}\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3}\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DM}: Matriz morfológica del dominio mecánico (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO MECÁNICO}}\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3}\\
+	\hline
+	\endhead
+	\multirow[t]{2}{*}{\minitab[c]{TRANSPORTE\\MECÁNICO DE\\LAS PRENDAS\\DE VESTIR}} & \IMM{0.14}{img/faja_transportadora_plana.jpg}{0.2em} & \IMM{0.13}{img/faja_transportadora_inclinada.jpg}{0.8em}& \IMM{0.11}{img/conveyer.jpg}{0.2em} \\
+	\cline{2-4} & \minitab[c]{Faja\\transportadora\\plana.\\\OpR} & \minitab[c]{Faja\\transportadora\\inclinada.\\\OpA} & \minitab[c]{Transportador\\automático\\de ropa.\\\OpV} \\
+	\hline    
+	\multirow[t]{2}{*}{\minitab[c]{GENERAR EL\\MOVIMIENTO\\DEL SISTEMA\\DE TRANSPORTE}} & \IMM{0.15}{stepper_motor.jpg}{0.3em} & \IMM{0.15}{motor_sincrono.jpg}{0.1em}& \IMM{0.14}{motor_asincrono.jpg}{0.2em} \\
+	\cline{2-4} & \minitab[c]{Motor a\\pasos.\\\OpV} & \minitab[c]{Motor\\síncrono.\\\OpA} & \minitab[c]{Motor de\\inducción.\\\OpR} \\
+	\hline
+\end{xltabular}
+
+\subsection{Dominio Informático}
+
+\begin{xltabular}{\textwidth}{|M{4cm}|Y|Y|Y|}
+	\caption{Matriz morfológica del dominio informático.}\label{tab:MM_DIn}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO INFORMÁTICO}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DIn}: Matriz morfológica del dominio informático (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO INFORMÁTICO}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endhead
+	\multirow[t]{2}{*}{\minitab[c]{IDENTIFICAR E\\INTERPRETAR LAS\\SEÑALES}} & \IMM{0.13}{img/computadora_industrial.png}{0.5em} & \IMM{0.14}{img/SBC.jpg}{0.3em} & \IMM{0.14}{img/micro.jpg}{0.3em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Computadora\\Industrial.\\\OpA} & \minitab[c]{Single Board\\Computer (SBC).\\\OpV} & \minitab[c]{Micro-\\controlador.\\\OpR} \bigstrut\\
+	\hline
+	\multirow[t]{2}{*}{\minitab[c]{ALMACENAR\\CRITERIOS DE\\SELECCIÓN}} & \IMM{0.11}{img/memoria_sd.jpg}{0.1em} & \IMM{0.12}{img/memoria_tera.jpg}{0.1em} & \IMM{0.12}{img/memoria_ssd.jpg}{0.1em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Memoria SD.\\\OpV} & \minitab[c]{Memoria\\Externa.\\\OpR} & \minitab[c]{Memoria\\Interna.\\\OpA} \bigstrut\\*
+	\hline
+	\pagebreak
+	\multirow[t]{2}{*}{\minitab[c]{PROCESAR\\IMÁGENES}} & \IMM{0.1}{img/opencv.png}{0.5em} & \IMM{0.11}{img/matlab.png}{0.2em} & \IMM{0.12}{img/code.png}{0.2em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{OpenCV\\(Python).\\\OpV} & \minitab[c]{MATLAB.\\\OpA} & \minitab[c]{Programación\\Nativa.\\\OpR} \bigstrut\\
+	\hline
+	\multirow[t]{2}{*}{\minitab[c]{DETECTAR\\DEFECTOS Y\\MEDIDAS}} & \IMM{0.13}{img/yolov8.jpg}{0.1em} & \IMM{0.13}{img/fasterRCNN.png}{0.1em} & \IMM{0.12}{img/analisis_clasico.png}{0.2em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{YOLOv8.\\\OpV} & \minitab[c]{Fast R-CNN.\\\OpA} & \minitab[c]{Análisis\\Clásico.\\\OpR} \bigstrut\\
+	\hline
+\end{xltabular}
+
+
+\subsection{Dominio de Control}
+
+\begin{xltabular}{\textwidth}{|M{4cm}|Y|Y|Y|}
+	\caption{Matriz morfológica del dominio de control.}\label{tab:MM_DC}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO DE CONTROL}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DC}: Matriz morfológica del dominio de control (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO DE CONTROL}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endhead
+	\multirow[t]{2}{*}{\minitab[c]{ELEMENTO DE\\CONTROL}} & \IMM{0.15}{img/ESP32.jpg}{0.08em} & \IMM{0.14}{img/raspberry.jpg}{0.1em} & \IMM{0.14}{img/plc.jpg}{0.1em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Microcontrolador.\\\OpR} & \minitab[c]{Single Board\\Computer (SBC).\\\OpV} & \minitab[c]{PLC.\\\OpA} \bigstrut\\
+	\hline
+	\pagebreak
+	\multirow[t]{2}{*}{\minitab[c]{ALGORITMO DE\\CONTROL}} & \IMM{0.16}{img/PID_DISCRETO.png}{0.1em} & \IMM{0.16}{img/onoff_control.png}{0.1em} & \IMM{0.15}{img/realimentacion_estados.png}{0.08em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{PID\\Discreto.\\\OpA} & \minitab[c]{Control\\ON OFF.\\\OpR} & \minitab[c]{Retroalimentación\\de Estados.\\\OpV} \bigstrut\\
+	\hline
+\end{xltabular}
+
+\subsection{Dominio Eléctrico/Electrónico}
+
+\begin{xltabular}{\textwidth}{|C{5cm}|Y|Y|Y|}
+	\caption{Matriz morfológica del dominio eléctrico/electrónico.}\label{tab:MM_DEE}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO ELÉCTRICO/ELECTRÓNICO}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DEE}: Matriz morfológica del dominio eléctrico/electrónico (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO ELÉCTRICO/ELECTRÓNICO}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endhead
+	\multirow[t]{2}{*}{\minitab[c]{ACONDICIONAR\\ENERGÍA\\ELÉCTRICA}} & \IMM{0.13}{img/fuente_switching.jpg}{0.1em} & \IMM{0.13}{img/circuito_rectificador.jpg}{0.1em} & \IMM{0.13}{img/adaptador_AC_DC.jpg}{0.1em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Fuente\\Switching.\\\OpV} & \minitab[c]{Rectificado\\AC/DC.\\\OpR} & \minitab[c]{Adaptador\\AC a DC.\\\OpA} \bigstrut\\
+	\hline
+	\multirow[b]{2}{*}{\minitab[c]{ACTIVAR\\SISTEMA DE\\PARADA DE\\EMERGENCIA}} & \IMM{0.12}{img/boton_parada_emergencia.jpg}{0.5em} &  &  \bigstrut\\
+	\cline{2-4} & \minitab[c]{Botón de\\parada de\\emergencia.\\\OpR \OpA \OpV} &  &  \bigstrut\\
+	\hline
+	\pagebreak
+	\multirow[b]{2}{*}{\minitab[c]{ENERGIZAR SIST. DE\\CONTROL, SENSORES,\\PROC. INFORMACIÓN\\Y MECÁNICO}} & \IMM{0.13}{img/cables_terminal_crimpado.jpg}{0.1em} & \IMM{0.13}{img/cable_motor.jpg}{0.1em} & \bigstrut\\
+	\cline{2-4} & \minitab[c]{Cables con\\los terminales\\crimpados.\\\OpR \OpV} & \minitab[c]{Cables de\\motor.\\\OpA} & \bigstrut\\
+	\hline
+	\multirow[b]{2}{*}{\minitab[c]{ALIMENTAR\\SISTEMA DE\\PROCESAMIENTO\\DE LA\\INFORMACIÓN}} & \IMM{0.11}{img/cable_usb_micro.jpg}{0.1em} & \IMM{0.12}{img/cable_usb_usbB.jpg}{0.5em} & \\
+	\cline{2-4} & \minitab[c]{Cable USB\\Tipo A a\\microUSB.\\\OpR \OpV} & \minitab[c]{Cable USB\\Tipo A a\\Tipo B.\\\OpA} & \bigstrut\\
+	\hline
+	\multirow[t]{2}{*}{\minitab[c]{ENCENDER LA\\ILUMINACIÓN\\ARTIFICIAL}} & \IMM{0.17}{img/panel_de_luz.jpg}{0.12em} & \IMM{0.13}{img/tira_led.png}{0.2em} & \bigstrut\\
+	\cline{2-4} & \minitab[c]{Panel de luz.\\\OpA \OpV} & \minitab[c]{Tira LED.\\\OpR} & \bigstrut\\
+	\hline
+\end{xltabular}
+
+\newpage
+
+\subsection{Dominio de Sensores}
+
+\begin{xltabular}{\textwidth}{|M{4cm}|Y|Y|Y|}
+	\caption{Matriz morfológica del dominio de sensores.}\label{tab:MM_DS}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO DE SENSORES}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endfirsthead
+	\caption*{Tabla \ref{tab:MM_DS}: Matriz morfológica del dominio de sensores. (Continuación).}\\
+	\hline
+	\multirow{2}{*}{\textbf{\minitab[c]{FUNCIONES\\PARCIALES}}} & \multicolumn{3}{c|}{\textbf{DOMINIO DE SENSORES}} \bigstrut\\
+	\cline{2-4} & \textbf{OPCIÓN 1} & \textbf{OPCIÓN 2} & \textbf{OPCIÓN 3} \bigstrut\\
+	\hline
+	\endhead
+	\multirow[b]{2}{*}{\minitab[c]{ADQUIRIR\\IMAGEN}} & \IMM{0.13}{img/camara_USB.jpg}{0.1em} & \IMM{0.13}{img/camara_industrial.jpg}{0.1em} & \IMM{0.13}{img/camara_web.jpg}{0.1em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Cámara USB.\\\OpV} & \minitab[c]{Cámara\\Industrial.\\\OpA} & \minitab[c]{Cámara Web.\\\OpR} \bigstrut\\
+	\hline
+	\multirow[b]{2}{*}{\minitab[c]{DETECTAR\\METALES EN\\PRENDAS}} & \IMM{0.13}{img/detector_agujas.jpg}{0.1em} & \IMM{0.13}{img/detector_metales.png}{0.1em} & \bigstrut\\
+	\cline{2-4} & \minitab[c]{Detector de\\Agujas.\\\OpA \OpV} & \minitab[c]{Detector de\\Metales.\\\OpR} & \bigstrut\\
+	\hline
+	\multirow[b]{2}{*}{\minitab[c]{DETECTAR\\PRESENCIA DE\\LA PRENDA\\PARA CAPTURA}} & \IMM{0.13}{img/sensor_proximidad_capacitivo.jpg}{0.1em} & \IMM{0.13}{img/sensor_fotoelectrico.jpg}{0.1em} & \IMM{0.13}{img/sensor_ultrasonido.jpg}{0.1em} \bigstrut\\
+	\cline{2-4} & \minitab[c]{Sensor\\Capacitivo.\\\OpV} & \minitab[c]{Sensor\\Fotoeléctrico.\\\OpA} & \minitab[c]{Sensor\\Ultrasonido.\\\OpR} \bigstrut\\
+	\hline
+\end{xltabular}

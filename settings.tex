@@ -1,0 +1,233 @@
+% #####################################################################
+% ############################# PAQUETES ##############################
+% #####################################################################
+
+% ************************CODIFICACIÓN Y FUENTE************************
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx} % Defines Adobe Times Roman (or equivalent) as default text font
+\pdfminorversion=7 % Por un warning por el logo en la portada
+
+% ************************INTERNACIONALIZACIÓN************************
+\usepackage[spanish,es-lcroman,es-nodecimaldot,es-tabla]{babel} % spanish, es-lcroman son para cambiar la numeración romana a mínuscula. (Por defecto, solo spanish esta en mayuscula), es-nodecimaldot es para usar "." como separador decimal
+
+% ************************GEOMETRÍA Y MÁRGENES************************
+\PassOptionsToPackage{showframe}{geometry} % Habilitar la opción de mostrar margenes en el paquete "geometry"
+\usepackage[a4paper,left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry} % Define los márgenes de la página
+
+% *************************GRÁFICOS Y FIGURAS*************************
+\usepackage{graphicx} % Permite incluir gráficos, \resizebox
+\graphicspath{ {./img/} } % Ruta por defector para las imágenes
+
+% ********************ENCABEZADOS Y PIES DE PÁGINA********************
+\usepackage{fancyhdr} % Permite personalizar encabezados y pies de página
+\setlength{\headheight}{14.5pt} % Para evitar un warning "Make it at least 14.49998pt"
+
+% ******************************CAPTIONS******************************
+%\usepackage[font=small]{caption} % Cambia el tamaño de las captions (figure y xltabular) a 10pt (ya que el documento esta definido en 12pt)
+\usepackage{caption}
+\captionsetup{
+	format=plain,
+	labelformat=simple,
+	font=small,
+	labelsep=colon,
+	skip=6pt,
+	justification=centering
+}
+
+% ****************************INTERLINEADO****************************
+\usepackage{setspace} % Permite cambiar el interlineado, permite usar \doublespacing y tambien permite usar \begin{spacing} para que solo cierto texto tenga otro valor de interlineado
+
+% *******************************TABLAS*******************************
+\usepackage{xltabular} % Este paquete carga el paquete ltablex, pero mantiene el entorno tabularx actual tal como está. El nuevo entorno xltabular es una combinación de longtable y tabularx: definiciones de encabezado/pie de página, especificador de columna X y posibles saltos de página.
+\usepackage{booktabs} % Para líneas horizontales profesionales: uso \toprule, \midrule, \bottomrule
+\usepackage{array} % Para definir nuevos tipos de columna con alineación: uso \newcolumntype
+\usepackage{tabularray,tblr-extras}
+\UseTblrLibrary{caption}
+
+% *******************************ÍNDICES*******************************
+\usepackage[figurewithin=none]{caption} % Remueve el espacio entre items de distinto chapter en la Lista de figuras
+\usepackage[tablewithin=none]{caption} % Remueve el espacio entre items de distinto chapter en la Lista de tablas
+\usepackage{tocbibind} % Permite incluir el índice de tablas, figuras y la bibliografía al índice general
+\usepackage{titletoc}% Personalización detallada de los contenidos, incluye \titlecontents
+
+% ****************************SITUACIONALES****************************
+\usepackage{lipsum} % Genera texto de relleno
+
+% Now load showboxes:
+%\usepackage{showboxes}
+% Enable frame drawing around boxes:
+%\ShowFrameBoxes
+
+% ********************************OTROS********************************
+\usepackage{titlesec} % Permite cambiar el tamaño, color, fuente de los títulos de chapter, section y subsection
+\usepackage[hidelinks,hypertexnames=false]{hyperref} % Gestiona enlaces hipertexto, incluye (\url) y \phantomsection y % Para evitar un warning "destination with the same identifier..."
+\usepackage[none]{hyphenat} % Para evitar que LaTeX corte las palabras al final de línea
+\usepackage{xurl} % Permite cortar URLs largas automáticamente en saltos de línea sin errores de formato
+%\usepackage{float} % Permite fijar la posición exacta de figuras/tablas con [H]
+\usepackage{environ} % Permite crear el nuevo entorno my_xltabular
+
+\usepackage{xcolor}
+\definecolor{Cerulean}{rgb}{0,0.682,0.937}
+\definecolor{Turbo}{rgb}{1,0.945,0.003}
+\definecolor{GreenYellow}{rgb}{0.678,1,0.184}
+
+
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{bigstrut}
+\usepackage{float}
+
+
+
+
+% #####################################################################
+% ################### DEFINICIÓN DE NUEVOS COMANDOS ###################
+% #####################################################################
+
+% ------------------- COMANDO PARA IMPRIMIR EL MES ------------------
+% Macro \mes: muestra el mes actual en español.
+\newcommand{\mes}{%
+	\ifcase\month\or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi}
+
+% ------------------- CONFIGURAR FOOTERS Y HEADERS -------------------
+% Se definen dos estilos, uno para el frontmatter con numeración en el centro-abajo; y mainmatterstyle, con numeración derecha-arriba
+\fancypagestyle{frontmatterstyle}{ % Estilo para el frontmatter
+	\fancyhf{} % Limpia el header and footer
+	\fancyfoot[C]{\thepage} % En el centro del footer coloca la numeración
+	\renewcommand{\headrulewidth}{0pt} % La línea se setea a grosor 0pt
+}
+\fancypagestyle{mainmatterstyle}{ % Estilo para el mainmatter
+	\fancyhf{} % Limpia el header and footer
+	\fancyhead[R]{\thepage} % En la esquina superior derecha del header coloca la numeración
+	\renewcommand{\headrulewidth}{0pt} % La línea se setea a grosor 0pt
+}
+
+% ------------------ CONFIGURACIÓN DEL INTERLINEADO -------------------
+\AtBeginEnvironment{figure}{\onehalfspacing} % Configura automáticamente interlineado simple en figuras
+\AtBeginEnvironment{xltabular}{\onehalfspacing} % Configura automáticamente interlineado 1.5 en tablas xltabular
+\AtBeginEnvironment{longtblr}{\onehalfspacing} % Configura automáticamente interlineado 1.5 en tablas xltabular
+
+% -------- CONFIGURACIÓN DE FUENTES Y TAMAÑOS DE LOS TÍTULOS --------
+% Personalización de \chapter
+% - [display] : hace que el número y el título del capítulo se muestren en líneas separadas
+% - Estilo del título de la sección
+% - CAPÍTULO #N : Prefijo del título + Número del capítulo
+% - 12pt : Espacio entre el prefijo y el título del capítulo.
+% - {}: Código adicional para antes del título (vacío en este caso).
+\titleformat{\chapter}[display]
+{\singlespacing\normalsize\bfseries\centering}
+{\MakeUppercase{\chaptertitlename} \thechapter}
+{12pt}
+{}
+
+% Personalización de \section
+% - Estilo del título de la sección: singlespacing, normalfont, normalsize, bfseries.
+% - Prefijo del título, ej. "1.1": utiliza \thesection seguido de un punto.
+% - 12pt: Espacio entre el prefijo y el título de la sección.
+% - {}: Código adicional para antes del título (vacío en este caso).
+\titleformat{\section}
+{\singlespacing\normalsize\bfseries}
+{\thesection.}
+{6pt}
+{}
+
+% Personalización de \subsection
+% - Estilo del título de la subsección: singlespacing, normalfont, normalsize, bfseries.
+% - Prefijo del título, ej. "1.1.1": utiliza \thesubsection seguido de un punto.
+% - 12pt: Espacio entre el prefijo y el título de la subsección.
+% - {}: Código adicional para antes del título, si es necesario (vacío).
+\titleformat{\subsection}
+{\singlespacing\normalfont\normalsize\bfseries}
+{\thesubsection.}
+{12pt}
+{}
+
+% Reducción del espacio en blanco encima del \chapter
+% - 0pt: Sin sangría a la izquierda
+% - -24.5pt: Reduce el espacio vertical predeterminado antes del título.
+% - 12pt: Espacio de 12pt después del título.
+\titlespacing*{\chapter}{0pt}{-29.5pt}{12pt} 
+
+% Reducción del espacio en blanco encima del \section
+% - 0pt: Sin sangría a la izquierda
+% - 0pt: Sin espacio vertical adicional antes del título.
+% - 6pt: Espacio de 6pt después del título.
+\titlespacing*{\section}{0pt}{0pt}{6pt}
+
+% Reducción del espacio en blanco encima del \subsection
+% - 0pt: Sin sangría a la izquierda.
+% - 0pt: Sin espacio vertical adicional antes del título.
+% - 6pt: Espacio de 6pt después del título.
+\titlespacing*{\subsection}{0pt}{0pt}{6pt}
+
+% ------------- CONFIGURACIÓN DE LA TABLA DE CONTENIDOS -------------
+% Configuración de la entrada de capítulos en la tabla de contenido
+% - Nivel de sección: chapter
+% - 0pt: Sin sangría.
+% - \vspace{6pt}\bfseries: Añade espacio vertical antes y aplica negrita al texto.
+% - \MakeUppercase{\chaptername} \thecontentslabel: : Muestra el nombre del capítulo en mayúsculas y su número seguido de dos puntos.
+% - {}: No se define un formato especial para entradas sin número.
+% - \hfill\contentspage: Alinea el número de página a la derecha con puntos de relleno.
+% - []: No hay código adicional después de la entrada.
+\titlecontents{chapter}
+[0pt]
+{\vspace{6pt}\bfseries}
+{\MakeUppercase{\chaptername} \thecontentslabel: }
+{}
+{\hfill\contentspage}
+[]
+
+% -------------- CONFIGURACIÓN DE UN NUEVO ENTORNO FIGURE --------------
+% Crea una leyenda que incluye fuente: #1 es el título (usado en la lista y en la leyenda) y #2 la fuente.
+\newcommand*{\captionsource}[2]{%
+	\if\relax\detokenize{#2}\relax
+	\caption[{#1}]{\centering #1.}%
+	\else
+	\caption[{#1}]{\centering #1.\\Fuente: Adaptado de #2}%
+	\fi
+}
+% Define un comando para figuras con fuente y ancho parametrizado.
+% #1: posición (e.g., h, t),
+% #2: archivo de imagen,
+% #3: título,
+% #4: fuente (o cita)
+% #5: ancho.
+\newcommand{\sourcefigure}[5]{%
+	\begin{figure}[#1]
+		\centering
+		\captionsetup{width=#5,belowskip=-10pt}
+		\includegraphics[width=#5]{#2}
+		\captionsource{#3}{#4}%
+		\label{fig:#2}
+	\end{figure}
+}
+
+% ----------------------- CONFIGURACIÓN DE longtblr ------------------------
+\NewColumnType{Y}{Q[c,co=1]}
+\DeclareTblrTemplate{contfoot-text}{normal}{Continua en la siguiente página...}
+\SetTblrTemplate{contfoot-text}{normal}
+\DeclareTblrTemplate{conthead-text}{normal}{\\(Continuación)}
+\SetTblrTemplate{conthead-text}{normal}
+\SetTblrInner[longtblr]{rowsep=0pt}
+
+% Definición de la macro:
+\newcommand{\bestTabla}[5][]{%
+	\begin{longtblr}[%
+		label   = {#1},%
+		caption = {%
+			#2%
+			\if\relax\detokenize{#3}\relax
+			.%  si #3 está vacío, sólo el punto
+			\else
+			. Fuente: Adaptado de #3% si #3 no está vacío
+			\fi
+		},%
+		entry   = {#2}% siempre el primer argumento
+		]{#4}%
+		#5%
+	\end{longtblr}%
+}
+
+% ------------------ EVITA EL WARNING DE UNDERFULL HBOXES ------------------
+\hbadness=99999
+\setlength\emergencystretch{10em}
